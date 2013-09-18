@@ -41,7 +41,7 @@ restore_options = " accepts a seed or master public key."
 config_options = " accounts, addr_history, auto_cycle, column_widths, console-history, contacts,\n fee_per_kb, frozen_addresses, gap_limit, imported_keys, labels,\n master_public_key, num_zeros, prioritized_addresses, proxy, seed,\n seed_version, server, transactions, use_change, use_encryption, winpos-qt"
 
 register_command('contacts',             0, 0, False, True,  'Show your list of contacts')
-register_command('create',               0, 0, False, True,  'Create a new wallet')
+register_command('create',               0, 1, False, True,  'Create a new wallet, if a second argument is passed, defaults for anything except password will be used (you can also set password via --password)', 'create [noninteractive]')
 register_command('createmultisig',       2, 2, False, True,  'similar to bitcoind\'s command')
 register_command('createrawtransaction', 2, 2, False, True,  'similar to bitcoind\'s command')
 register_command('deseed',               0, 0, False, True,  'Remove seed from wallet, creating a seedless, watching-only wallet.')
